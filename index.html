@@ -17,7 +17,7 @@
         background-image: url(./assets/downloadPatternico.png);
         height: 100vh;
         background-repeat: repeat;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0, 3);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
       }
       .text-showing {
         text-align: center;
@@ -90,6 +90,18 @@
         font-size: 30px;
         width: 50%;
         padding: 10px;
+      }
+      .div-inferior-interna {
+        margin: 20px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.6);
+        border-top: none;
+        border-bottom: none;
+        width: 90%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     </style>
     <script
@@ -165,106 +177,122 @@
       <div class="logo-image"></div>
     </main>
     <div class="div-inferior">
-      <div class="text-showing">
-        <p
-          class="typewrite"
-          data-period="1500"
-          data-type='[ "@churritos.bh", "Experimente!!" ]'
-        >
-          <span class="wrap"></span>
-        </p>
-      </div>
-      <div class="div-icons">
-        <div id="icon1" class="links">
-          <span class="social-wrapper">
-            <a
-              class="social"
-              href="https://www.instagram.com/churritos.bh/"
-              target="_blank"
-            >
-              <i class="fab fa-instagram-square"></i>
-            </a>
-          </span>
+      <div class="div-inferior-interna">
+        <div class="text-showing">
+          <p
+            class="typewrite"
+            data-period="1500"
+            data-type='[ "@churritos.bh", "Experimente!!" ]'
+          >
+            <span class="wrap"></span>
+          </p>
         </div>
-        <div id="icon2" class="links">
-          <span class="social-wrapper">
-            <a href="https://www.ifood.com.br/" target="_blank">
-              <img src="./assets/iFoodIcon.ico" />
-            </a>
-          </span>
+        <div class="div-icons">
+          <div id="icon1" class="links">
+            <span class="social-wrapper">
+              <a
+                class="social"
+                href="https://www.instagram.com/churritos.bh/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram-square"></i>
+              </a>
+            </span>
+          </div>
+          <div id="icon2" class="links">
+            <span class="social-wrapper">
+              <a href="https://www.ifood.com.br/" target="_blank">
+                <img src="./assets/iFoodIcon.ico" />
+              </a>
+            </span>
+          </div>
+          <div id="icon3" class="links">
+            <span class="social-wrapper">
+              <a
+                class="social"
+                href="https://www.ubereats.com/"
+                target="_blank"
+              >
+                <img src="./assets/uberEatsIcon.ico" />
+              </a>
+            </span>
+          </div>
+          <div id="icon3" class="links">
+            <span class="social-wrapper">
+              <a
+                class="social"
+                href="https://food.99app.com/pt-BR/"
+                target="_blank"
+              >
+                <img src="./assets/99Food.ico" />
+              </a>
+            </span>
+          </div>
         </div>
-        <div id="icon3" class="links">
-          <span class="social-wrapper">
-            <a class="social" href="https://www.ubereats.com/" target="_blank">
-              <img src="./assets/uberEatsIcon.ico" />
-            </a>
-          </span>
+        <div class="div-recipes-title">
+          <h1>
+            Receita
+          </h1>
         </div>
-        <div id="icon3" class="links">
-          <span class="social-wrapper">
-            <a
-              class="social"
-              href="https://food.99app.com/pt-BR/"
-              target="_blank"
-            >
-              <img src="./assets/99Food.ico" />
-            </a>
-          </span>
+        <div class="div-recipes">
+          <ul class="list-recipe">
+            <li>
+              3 cenouras descascadas e cortada em rodelas.
+            </li>
+            <li>
+              4 ovos.
+            </li>
+            <li>
+              1 xícara (chá) de óleo
+            </li>
+            <li>
+              1 xícara e 1/2 (chá) de açúcar
+            </li>
+            <li>
+              2 xícaras (chá) de farinha de trigo (sem fermento)
+            </li>
+            <li>
+              1 colher (sopa) de fermento em pó químico
+            </li>
+            <li>
+              1 pitada de sal
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="div-recipes-title">
-        <h1>
-          Receita
-        </h1>
-      </div>
-      <div class="div-recipes">
-        <ul class="list-recipe">
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-        </ul>
-      </div>
-      <div class="div-preparing-title">
-        <h1>
-          Modo de Preparo ;)
-        </h1>
-      </div>
-      <div class="div-preparing">
-        <ul class="list-recipe">
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </li>
-        </ul>
+        <div class="div-preparing-title">
+          <h1>
+            Modo de Preparo ;)
+          </h1>
+        </div>
+        <div class="div-preparing">
+          <ul class="list-recipe">
+            <li>
+              Coloque no liquidificador, os ovos, a cenoura, o óleo e o açúcar.
+            </li>
+            <li>
+              Bata tudo por 5 minutinhos. Reserve.
+            </li>
+            <li>
+              Numa tigela, junte a farinha de trigo peneirada, o fermento em pó
+              e o sal.
+            </li>
+            <li>
+              Misture até que fique uma massa bem homogênea.
+            </li>
+            <li>
+              Misture bem e em seguida despeje a mistura que foi batida.
+            </li>
+            <li>
+              Despeje numa forma untada e enfarinhada.
+            </li>
+            <li>
+              Leve ao forno preaquecido, 180ºC, por aproximadamente 50 minutos.
+            </li>
+            <li>
+              Desenforme o bolo.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
