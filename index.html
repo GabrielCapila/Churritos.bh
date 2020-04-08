@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+      .logo-image {
+        background-image: url(./assets/imageChurritos.png);
+        margin-left: auto;
+        margin-right: auto;
+        width: 700px;
+        height: 650px;
+        display: block;
+      }
+      .main-image {
+        background-image: url(./assets/downloadPatternico.png);
+        height: 100vh;
+        background-repeat: repeat;
+      }
+      .text-showing {
+        text-align: center;
+        display: block;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        margin-bottom: 5rem;
+      }
+
+      body {
+        margin: 0;
+      }
+      .social-media {
+        margin-top: 0;
+      }
+      .social {
+        font-size: 5rem;
+      }
+
+      #icon1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #icon2 {
+        position: absolute;
+        top: 0;
+        left: 10rem;
+      }
+      #icon3 {
+        position: absolute;
+        top: 0;
+        left: 20rem;
+      }
+      .div-recipes-title {
+        margin-top: 10rem;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 1rem;
+      }
+      .div-recipes {
+        margin-top: 2rem;
+        text-align: initial;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.5rem;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/10187326ff.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        console.log("this.period: ", this.period);
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+
+      window.onload = function () {
+        var elements = document.getElementsByClassName("typewrite");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-type");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML =
+          ".typewrite > .wrap { font-family: 'Montserrat', sans-serif;border-right: 0.08em solid #fff;font-size: 4rem; overflow-wrap: break-word; color: #000;letter-spacing: 0.2cm;}";
+        document.body.appendChild(css);
+      };
+    </script>
+  </head>
+  <body>
+    <main class="main-image">
+      <div class="logo-image"></div>
+      <div class="text-showing">
+        <p
+          class="typewrite"
+          data-period="1500"
+          data-type='[ "@churritos.bh", "Experimente!!" ]'
+        >
+          <span class="wrap"></span>
+        </p>
+      </div>
+      <div id="icon1" class="links">
+        <span class="social-wrapper">
+          <a
+            class="social"
+            href="https://www.instagram.com/churritos.bh/"
+            target="_blank"
+          >
+            <i class="fab fa-instagram-square"></i>
+          </a>
+        </span>
+      </div>
+      <div id="icon2" class="links">
+        <span class="social-wrapper">
+          <a class="social" href="https://www.ifood.com.br/" target="_blank">
+            <img src="./assets/iFoodIcon (2).png" />
+          </a>
+        </span>
+      </div>
+      <div id="icon3" class="links">
+        <span class="social-wrapper">
+          <a
+            class="social"
+            href="https://www.instagram.com/churritos.bh/"
+            target="_blank"
+          >
+            <i class="fab fa-instagram-square"></i>
+          </a>
+        </span>
+      </div>
+      <div class="div-recipes-title">
+        <h1>
+          Receitas
+        </h1>
+      </div>
+      <div class="div-recipes">
+        <h1>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and web
+          page editors now use Lorem Ipsum as their default model text, and a
+          search for 'lorem ipsum' will uncover many web sites still in their
+          infancy. Various versions have evolved over the years, sometimes by
+          accident, sometimes on purpose (injected humour and the like).
+        </h1>
+      </div>
+    </main>
+  </body>
+</html>
