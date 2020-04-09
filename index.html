@@ -39,25 +39,29 @@
         margin-top: 0;
       }
       .social {
-        font-size: 3.3rem;
+        font-size: 4.2rem;
       }
 
-      .div-recipes-title {
+      .div-info-title {
         margin-top: 2rem;
         margin-bottom: 2rem;
         text-align: center;
         font-family: "Quicksand", sans-serif;
         letter-spacing: 1.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
-      .div-recipes {
+      .div-info {
         margin-top: 2rem;
-        text-align: initial;
-        font-family: "Quicksand", sans-serif;
-        font-size: 30px;
-        width: 50%;
+        text-align: center;
+        width: 30%;
         padding: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+        font-family: "Quicksand", sans-serif;
+        font-size: 2rem;
+        background-color: ivory;
+        border-radius: 40px;
       }
+
       .div-inferior {
         padding: 0 50px;
         height: 100%;
@@ -84,15 +88,14 @@
         text-align: center;
         font-family: "Quicksand", sans-serif;
         letter-spacing: 1.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       .div-preparing {
-        margin-top: 2rem;
-        text-align: initial;
-        font-family: "Quicksand", sans-serif;
-        font-size: 30px;
+        display: flex;
+        flex-direction: row;
         width: 50%;
-        padding: 10px;
+        justify-content: center;
+        align-items: center;
       }
       .div-inferior-interna {
         margin: 20px;
@@ -105,6 +108,30 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+      .p-title {
+        font-size: 3rem;
+        font-family: "Quicksand", sans-serif;
+        font-weight: bold;
+      }
+      #icon1 {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+      #icon2 {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+      #icon4 {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      @media (max-width: 576px) {
+        .div-info {
+          width: 50%;
+          font-size: 2.5rem;
+        }
       }
     </style>
     <script
@@ -190,10 +217,49 @@
             <span class="wrap"></span>
           </p>
         </div>
-        <div class="div-icons">
+
+        <div class="div-info-title">
+          <h1>
+            Informações
+          </h1>
+        </div>
+        <div class="div-info">
+          <p class="p-title">
+            Porção Churritos
+          </p>
+          <p>
+            12 unidades + doce de leite
+          </p>
+          <p class="p-title">
+            R$10,00
+          </p>
+        </div>
+        <div class="div-info">
+          <p class="p-title">
+            Unidade Churritos
+          </p>
+          <p class="p-title">
+            R$0,70
+          </p>
+        </div>
+        <div class="div-info">
+          <p class="p-title">
+            Adicionar Doce de Leite?
+          </p>
+          <p class="p-title">
+            R$2,90
+          </p>
+        </div>
+        <div class="div-preparing-title">
+          <h1>
+            Como posso fazer meus pedidos?
+          </h1>
+        </div>
+        <div class="div-preparing">
           <div id="icon1" class="links">
             <span class="social-wrapper">
               <a
+                id="a-insta"
                 class="social"
                 href="https://www.instagram.com/churritos.bh/"
                 target="_blank"
@@ -205,96 +271,18 @@
           <div id="icon2" class="links">
             <span class="social-wrapper">
               <a href="https://www.ifood.com.br/" target="_blank">
-                <img src="./assets/iFoodIcon.ico" />
+                <img src="./assets/LargeiFoodIcon.ico" />
               </a>
             </span>
           </div>
-          <div id="icon3" class="links">
+
+          <div id="icon4" class="links">
             <span class="social-wrapper">
-              <a
-                class="social"
-                href="https://www.ubereats.com/"
-                target="_blank"
-              >
-                <img src="./assets/uberEatsIcon.ico" />
+              <a href="https://food.99app.com/pt-BR/" target="_blank">
+                <img src="./assets/99FoodLarge.ico" />
               </a>
             </span>
           </div>
-          <div id="icon3" class="links">
-            <span class="social-wrapper">
-              <a
-                class="social"
-                href="https://food.99app.com/pt-BR/"
-                target="_blank"
-              >
-                <img src="./assets/99Food.ico" />
-              </a>
-            </span>
-          </div>
-        </div>
-        <div class="div-recipes-title">
-          <h1>
-            Receita
-          </h1>
-        </div>
-        <div class="div-recipes">
-          <ul class="list-recipe">
-            <li>
-              3 cenouras descascadas e cortada em rodelas.
-            </li>
-            <li>
-              4 ovos.
-            </li>
-            <li>
-              1 xícara (chá) de óleo
-            </li>
-            <li>
-              1 xícara e 1/2 (chá) de açúcar
-            </li>
-            <li>
-              2 xícaras (chá) de farinha de trigo (sem fermento)
-            </li>
-            <li>
-              1 colher (sopa) de fermento em pó químico
-            </li>
-            <li>
-              1 pitada de sal
-            </li>
-          </ul>
-        </div>
-        <div class="div-preparing-title">
-          <h1>
-            Modo de Preparo ;)
-          </h1>
-        </div>
-        <div class="div-preparing">
-          <ul class="list-recipe">
-            <li>
-              Coloque no liquidificador, os ovos, a cenoura, o óleo e o açúcar.
-            </li>
-            <li>
-              Bata tudo por 5 minutinhos. Reserve.
-            </li>
-            <li>
-              Numa tigela, junte a farinha de trigo peneirada, o fermento em pó
-              e o sal.
-            </li>
-            <li>
-              Misture até que fique uma massa bem homogênea.
-            </li>
-            <li>
-              Misture bem e em seguida despeje a mistura que foi batida.
-            </li>
-            <li>
-              Despeje numa forma untada e enfarinhada.
-            </li>
-            <li>
-              Leve ao forno preaquecido, 180ºC, por aproximadamente 50 minutos.
-            </li>
-            <li>
-              Desenforme o bolo.
-            </li>
-          </ul>
         </div>
       </div>
     </div>
