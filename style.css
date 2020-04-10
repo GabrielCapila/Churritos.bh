@@ -93,6 +93,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .div-how-to-order p {
@@ -111,6 +112,8 @@
   justify-content: center;
   border-radius: 10px;
   align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .p-title {
   font-size: 3rem;
