@@ -94,10 +94,14 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
 }
 
 .div-how-to-order p {
   font-size: 2rem;
+  margin: 7px;
 }
 
 .div-inferior-interna {
@@ -126,6 +130,9 @@
   font-size: 2.375rem;
   letter-spacing: 0.2cm;
 }
+#p-how-to-order {
+  align-self: center;
+}
 
 @media (max-width: 768px) {
   .div-inferior {
@@ -141,6 +148,6 @@
 }
 @media (max-width: 360px) {
   .wrap {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
