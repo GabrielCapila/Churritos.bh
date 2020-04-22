@@ -133,6 +133,9 @@
 #p-how-to-order {
   align-self: center;
 }
+#how-to-order-p {
+  letter-spacing: 0.1cm;
+}
 
 @media (max-width: 768px) {
   .div-inferior {
